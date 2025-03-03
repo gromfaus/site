@@ -9,14 +9,27 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 h1, h2 {
     margin: 10px 0;
 }
 
-.about, .contacts {
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background: #0056b3;
+}
+
+.about, .portfolio, .contacts, .contact-form {
     background: #fff;
     padding: 20px;
     margin: 20px auto;
@@ -26,10 +39,67 @@ h1, h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
+/* Портфолио */
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
-a:hover {
-    text-decoration: underline;
+
+.portfolio-item {
+    width: 45%;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background: #218838;
+}
+
+/* Анимация появления */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .portfolio-items {
+        flex-direction: column;
+    }
+    .portfolio-item {
+        width: 100%;
+    }
 }

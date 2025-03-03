@@ -5,21 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Визитка</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+
     <header>
         <h1>Ваше Имя</h1>
         <p>Ваша профессия или род деятельности</p>
+        <a href="#contact-form" class="btn">Связаться</a>
     </header>
-    <section class="about">
+
+    <section class="about fade-in">
         <h2>Обо мне</h2>
         <p>Краткое описание: кто вы, чем занимаетесь, ваши ключевые навыки.</p>
     </section>
-    <section class="contacts">
+
+    <section class="portfolio fade-in">
+        <h2>Портфолио</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <img src="work1.jpg" alt="Пример работы">
+                <p>Описание проекта</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="work2.jpg" alt="Пример работы">
+                <p>Описание проекта</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts fade-in">
         <h2>Контакты</h2>
         <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
         <p>Телефон: <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
         <p>Соцсети: <a href="https://t.me/yourprofile" target="_blank">Telegram</a></p>
     </section>
+
+    <section class="contact-form fade-in">
+        <h2>Напишите мне</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш Email" required>
+            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <p id="form-message"></p>
+    </section>
+
 </body>
 </html>
